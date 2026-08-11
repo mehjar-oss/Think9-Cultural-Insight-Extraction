@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Think9 - Cultural Insight Extraction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="grid">
+      <div style="grid-column: 1 / -1;">
+        <h1>Cultural Insight<br>Extraction &amp;<br>Summarization</h1>
+        <p style="font-size: 1.5rem; font-weight: 500; margin-top: 1rem; color: #666; max-width: none;">
+          Multi-Architecture Approach with Detailed Tech Stack</p>
+      </div>
+    </header>
+
+    <!-- 01 Overview -->
+    <section class="grid">
+      <div class="col-sidebar">
+        <h2>01<br>Overview</h2>
+      </div>
+      <div class="col-main">
+        <h3>Problem Statement</h3>
+        <p>Think9’s Bharat Darshan ethnographic data is vast, complex, and deeply hierarchical. Extracting actionable
+          cultural insights requires models that:</p>
+        <ul>
+          <li>Understand nested narratives and layered cultural contexts</li>
+          <li>Summarize at multiple granularities while preserving nuance</li>
+          <li>Capture semantic shifts and regional variations</li>
+          <li>Handle long documents with diverse dialects and styles</li>
+        </ul>
+
+        <h3>Solution Objective</h3>
+        <p>Build a flexible, scalable system to extract rich, multi-level cultural insights and summaries from large
+          ethnographic corpora using a combination of architectures:</p>
+        <ul>
+          <li><strong>Recursive Language Models (RLM):</strong> Models hierarchical structure naturally; captures nested
+            semantics.</li>
+          <li><strong>Hierarchical Transformers:</strong> Efficient long-text modeling by segmenting and aggregating
+            representations.</li>
+          <li><strong>Graph Neural Networks (GNN):</strong> Models entities &amp; their relations as graphs; excellent
+            for relational reasoning.</li>
+          <li><strong>Contrastive Learning + Topic Modeling:</strong> Learns semantic clusters without heavy
+            supervision; tracks theme evolution.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 Architecture -->
+    <section class="grid">
+      <div class="col-sidebar">
+        <h2>02<br>Design</h2>
+      </div>
+      <div class="col-main" style="grid-column: 1 / -1;">
+        <!-- Using full width for diagram, but text in col-main -->
+        <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem;">
+          <div style="grid-column: 4 / -1;">
+            <h3>Core System Workflow</h3>
+            <p><strong>Dspy.ai</strong> will be embedded as the core platform for orchestrating data pipelines,
+              training, deployment, monitoring, and collaboration.</p>
+            <ul>
+              <li><strong>Data Ingestion &amp; Preprocessing:</strong> Clean and structure data (Python, SpaCy,
+                Dspy.ai).</li>
+              <li><strong>Semantic Parsing:</strong> Identify entities and themes (mBERT, PyTorch Geometric, BERTopic).
+              </li>
+              <li><strong>Multi-Level Summarization:</strong> Generate hierarchical summaries (BART, T5, Hugging Face).
+              </li>
+              <li><strong>Visualization Dashboard:</strong> Interactive UI for insights (React.js, D3.js, FastAPI).</li>
+              <li><strong>Human-in-the-loop Feedback:</strong> Experts validate outputs (Label Studio, MLflow).</li>
+            </ul>
+          </div>
+        </div>
+
+        <iframe class="architecture-embed" src="think9_architecture_diagram.html"
+          title="Think9 Architecture Diagram"></iframe>
+      </div>
+    </section>
+
+    <!-- 03 Tech Stack -->
+    <section class="grid">
+      <div class="col-sidebar">
+        <h2>03<br>Tech Stack</h2>
+      </div>
+      <div class="col-main">
+        <h3>Technology Stack by Component</h3>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 30%;">Component</th>
+              <th style="width: 35%;">Recommended Technologies</th>
+              <th style="width: 35%;">Reasoning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Data Ingestion &amp; Preprocessing</strong></td>
+              <td>Python (Pandas, NumPy)<br>NLP: SpaCy, NLTK, Stanza<br>regex, langdetect</td>
+              <td>Flexible, mature NLP libraries for multilingual Indian text cleaning and hierarchical chunking.</td>
+            </tr>
+            <tr>
+              <td><strong>Recursive Language Model (RLM)</strong></td>
+              <td>PyTorch / TensorFlow<br>TreeLSTM / Recursive NN<br>Hugging Face Transformers</td>
+              <td>Supports recursive hierarchical encoding; flexible for custom cultural entity embedding.</td>
+            </tr>
+            <tr>
+              <td><strong>Hierarchical Transformer</strong></td>
+              <td>Hugging Face (Longformer, BigBird)<br>PyTorch Lightning<br>SentencePiece / BPE</td>
+              <td>Efficient handling of long documents with segment-level attention; pretrained multilingual models.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Named Entity Recognition (NER)</strong></td>
+              <td>SpaCy with Indian cultural models<br>mBERT, XLM-RoBERTa<br>Prodigy or Label Studio</td>
+              <td>High-quality entity detection crucial for cultural concepts; supports active learning.</td>
+            </tr>
+            <tr>
+              <td><strong>Graph Neural Networks (GNN)</strong></td>
+              <td>PyTorch Geometric / DGL<br>NetworkX<br>Neo4j / TigerGraph</td>
+              <td>Models cultural entity relations; scalable graph processing and visualization.</td>
+            </tr>
+            <tr>
+              <td><strong>Topic Modeling &amp; Contrastive Learning</strong></td>
+              <td>BERTopic<br>Sentence-BERT<br>SimCSE</td>
+              <td>Combines semantic clustering with unsupervised pattern discovery; tracks theme evolution.</td>
+            </tr>
+            <tr>
+              <td><strong>Multi-Level Summarization</strong></td>
+              <td>Hugging Face (BART, T5)<br>Sumy / TextRank</td>
+              <td>Hybrid summarization to preserve cultural nuance at phrase, paragraph, and document levels.</td>
+            </tr>
+            <tr>
+              <td><strong>Visualization Dashboard</strong></td>
+              <td>React.js / Vue.js<br>D3.js / Chart.js<br>FastAPI / ElasticSearch</td>
+              <td>Interactive exploration of insights; scalable web architecture with rich visualization options.</td>
+            </tr>
+            <tr>
+              <td><strong>Human-in-the-loop Feedback</strong></td>
+              <td>Label Studio / Prodigy<br>MLflow / W&amp;B</td>
+              <td>Seamless expert validation and iterative model improvement workflows.</td>
+            </tr>
+            <tr>
+              <td><strong>Deployment &amp; Infrastructure</strong></td>
+              <td>Cloud: AWS / GCP / Azure<br>Docker, Kubernetes<br>GPU (NVIDIA A100/T4)</td>
+              <td>Scalable infrastructure supporting heavy NLP model training and deployment.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Workflow Mapping to Tech Stack</h3>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 30%;">Step</th>
+              <th style="width: 70%;">Technologies Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hierarchical Segmentation</strong></td>
+              <td>SpaCy sentence/paragraph detectors + custom recursive split logic</td>
+            </tr>
+            <tr>
+              <td><strong>Cultural Entity Extraction</strong></td>
+              <td>Fine-tuned NER Transformers (mBERT/XLM-RoBERTa) + SpaCy + annotation tools</td>
+            </tr>
+            <tr>
+              <td><strong>Graph Construction &amp; Learning</strong></td>
+              <td>PyTorch Geometric/DGL + NetworkX + optional Neo4j graph DB</td>
+            </tr>
+            <tr>
+              <td><strong>Insights Visualization</strong></td>
+              <td>React.js frontend + D3.js visualizations + FastAPI backend + ElasticSearch</td>
+            </tr>
+            <tr>
+              <td><strong>Human Expert Feedback</strong></td>
+              <td>Label Studio annotation interface + MLflow/W&amp;B model tracking</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 04 Summarization -->
+    <section class="grid">
+      <div class="col-sidebar">
+        <h2>04<br>Summary</h2>
+      </div>
+      <div class="col-main">
+        <h3>Multi-Level Strategy</h3>
+        <ul>
+          <li><strong>Extractive summarization:</strong> Identify key sentences/phrases preserving important cultural
+            details.</li>
+          <li><strong>Abstractive summarization:</strong> Rewrite summaries maintaining semantic and cultural integrity.
+          </li>
+          <li><strong>Recursive summarization:</strong> Summaries at multiple granularities linked hierarchically.</li>
+          <li><strong>Summaries enriched with metadata:</strong> Region, festival, time period tags for easy filtering.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 05 Roadmap -->
+    <section class="grid">
+      <div class="col-sidebar">
+        <h2>05<br>Roadmap</h2>
+      </div>
+      <div class="col-main">
+        <h3>Implementation Timeline (30 Days)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 15%;">Week</th>
+              <th style="width: 45%;">Tasks</th>
+              <th style="width: 40%;">Deliverables</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Week 1</strong></td>
+              <td>Data ingestion pipeline + hierarchical segmentation setup with Dspy.ai. Integrate annotation tool.
+              </td>
+              <td>Cleaned, structured hierarchical dataset; annotation interface ready.</td>
+            </tr>
+            <tr>
+              <td><strong>Week 2</strong></td>
+              <td>Prototype RLM + hierarchical transformer models. Model training with experiment tracking.</td>
+              <td>Initial recursive + hierarchical encoders. Trained prototypes.</td>
+            </tr>
+            <tr>
+              <td><strong>Week 3</strong></td>
+              <td>Develop GNN pipeline for cultural entity graph extraction. Deploy models as APIs.</td>
+              <td>Cultural knowledge graph prototype. Functional inference pipelines.</td>
+            </tr>
+            <tr>
+              <td><strong>Week 4</strong></td>
+              <td>Integrate summarization modules + build visualization dashboard. Automate retraining pipelines.</td>
+              <td>Multi-level insight dashboard demo. Feedback-enabled monitoring system.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 06 Outcomes -->
+    <section class="grid">
+      <div class="col-sidebar">
+        <h2>06<br>Outcomes</h2>
+      </div>
+      <div class="col-main">
+        <h3>Benefits for Think9</h3>
+        <ul>
+          <li><strong>Streamlined development:</strong> Automates repetitive steps in data processing and model
+            lifecycle via Dspy.ai.</li>
+          <li><strong>Deep Insights:</strong> Richer and more accurate extraction of multi-layered cultural insights.
+          </li>
+          <li><strong>Scalability:</strong> Ability to handle large volumes of diverse ethnographic data efficiently.
+          </li>
+          <li><strong>Actionable Strategy:</strong> Actionable summaries supporting brand strategy rooted in deep
+            culture.</li>
+          <li><strong>Visualization:</strong> Visualization of complex cultural networks enhances strategic
+            decision-making.</li>
+        </ul>
+
+        <h3>Potential Extensions</h3>
+        <ul>
+          <li>Add multimodal inputs: audio/video ethnographies with corresponding architectures.</li>
+          <li>Use insights to drive AI-powered brand storytelling aligned with Indian cultural nuances.</li>
+          <li>Expand human-in-the-loop interfaces for continuous ethnographer feedback and model refinement.</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>
